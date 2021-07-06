@@ -2,8 +2,9 @@ def solution(n, arr1, arr2):
     _arr1 = []
     _arr2 = []
     result = []
+    answer = []
     
-    for i in arr1:
+    for i in arr1: # arr1 이진수 변환
         tmp = []
         while i >= 1:
             if i <= 1:
@@ -14,7 +15,7 @@ def solution(n, arr1, arr2):
             i = i//2
         _arr1.append(tmp)
     
-    for i in arr2:
+    for i in arr2: # arr2 이진수 변환
         tmp = []
         while i >= 1:
             if i <= 1:
@@ -25,15 +26,15 @@ def solution(n, arr1, arr2):
             i = i//2
         _arr2.append(tmp)
     
-    for i in _arr1:
+    for i in _arr1: # arr1 0채워넣기
         while len(i) < n:
             i.insert(0, 0)
         
-    for i in _arr2:
+    for i in _arr2: # arr2 0채워넣기
         while len(i) < n:
             i.insert(0, 0)  
             
-    for i in range(n):
+    for i in range(n): # '#', ' ' 포맷으로 변환
         tmp = []
         for k in range(n):
             if _arr1[i][k]+_arr2[i][k] > 0:
@@ -42,11 +43,11 @@ def solution(n, arr1, arr2):
                 tmp.append(' ')
         result.append(tmp)
         
-    b = []
-    for i in result:
-        a = ''.join(i)
-        b.append(a)
-    return b
+    
+    for i in result: # str으로 변환
+        s = ''.join(i)
+        answer.append(s)
+    return answer
 
 
 
