@@ -1,3 +1,3 @@
 # Programmers
-###### #Algoritm #CodingTestPractice
+###### #Algoritm 
 - Python
