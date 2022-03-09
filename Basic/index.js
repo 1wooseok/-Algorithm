@@ -13,4 +13,4 @@ console.log('선택 정렬 : ' + selection_sort(testArr));
 console.log('거품 정렬 : ' + bubble_sort(testArr2));
 console.log('삽입 정렬 : ' + injection_sort(testArr3));
 console.log('퀵 정렬 : ' + quick_sort(testArr4));
-console.log(regression_sum([1,2,3,4,5,6,7,8,9]));
+console.log(recursive_sum([1,2,3,4,5,6,7,8,9]));
