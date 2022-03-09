@@ -1,3 +1,5 @@
+// 정렬되지 않은 배열중 최소값을 왼쪽에 배치시킴.
+
 export default function selection_sort(arr) {
   for(let i=0; i<arr.length; i++) {
     let min = i;

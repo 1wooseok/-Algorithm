@@ -1,3 +1,5 @@
+// 문제를 해결할 수 있는 가장 쉬운방법으로 분할하여 해결
+
 export default function quick_sort(arr) {
   if (arr.length <= 1) {
     return arr;
