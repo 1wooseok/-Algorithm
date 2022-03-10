@@ -1,7 +1,7 @@
-// 분할 정복을 이용한 배열 요소 합
+// 분할 정복을 이용한 배열 최대값
 function getMax(arr) {
-  if(arr.length === 0) {
-    return 0;
+  if(arr.length === 2) {
+    return arr[0] >= arr[1] ? arr[0] : arr[1];
   }
   return 
 }
