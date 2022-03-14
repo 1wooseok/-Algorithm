@@ -2,25 +2,25 @@ import Queue from "./queue.js";
 import graph from "./graph.js";
 
 function bfs(item) {
-  const Q = new Queue();
-  Q.enque(...graph["me"]);
+  const q = new Queue();
+  graph["me"].forEach(person => q.enque(person));
   const visited = [];
-
-  while (Q.queue.length !== 0) {
-    const person = Q.deque();
-    if (!person in visited) {
-      if (person === item) {
-        return item;
+  
+  while(q.queue.length !== 0) {
+    const target = q.deque();
+    if(!(target in visited)) {
+      if(target === item) {
+        return target;
       } else {
-        if (!graph[person]) {
-          return false;
+        if(target) {
+          graph[target].forEach(person => q.enque(person));
         }
-        Q.enque(...graph[person]);
       }
     }
   }
-  return false;
+  return `${item}이란 사람은 없음`;
 }
+
 // 수소문해서 사람을 찾는과정과 비슷.
 // 처음에는 가장 가까운 친구를 탐색
 // 내 주변에서 찾지 못했으면 친구의 친구를 탐색
