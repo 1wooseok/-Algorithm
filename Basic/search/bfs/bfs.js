@@ -3,20 +3,21 @@ import graph from "./graph.js";
 
 function bfs(item) {
   const q = new Queue();
-  graph["me"].forEach(person => q.enque(person));
+  graph["me"].forEach((person) => q.enque(person));
   const visited = [];
-  
-  while(q.queue.length !== 0) {
+
+  while (q.queue.length !== 0) {
     const target = q.deque();
-    if(!(target in visited)) {
-      if(target === item) {
+    if (!(target in visited)) {
+      if (target === item) {
         return target;
       } else {
-        if(target) {
-          graph[target].forEach(person => q.enque(person));
+        if (target) {
+          graph[target].forEach((person) => q.enque(person));
         }
       }
     }
+    visited.push(target);
   }
   return `${item}이란 사람은 없음`;
 }
