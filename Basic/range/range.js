@@ -1,6 +1,6 @@
 function range(start, end, step) {
     if (start === undefined) {
-        throw new Error("Function range must be get 2 parameters (start: number, end: number)");
+        throw new Error("Function range needs at least one parameters (start: number)");
     }
     var result = [];
     // All Parameters
@@ -50,12 +50,14 @@ function range(start, end, step) {
     }
     return result;
 }
+
 function debugConsole(result, x, y, z) {
     console.log("range(".concat(x, ", ").concat(y, ", ").concat(z, ") should be ").concat(result));
     console.log("range(".concat(x, ", ").concat(y, ", ").concat(z, ") is ").concat(range(x, y, z)));
     console.log(" ");
     console.log(" ");
 }
+
 console.log("range(1, 10, 1) should be 1,2,3,4,5,6,7,8,9,10");
 console.log("range(1, 10, 1) result is ".concat(range(1, 10, 1)));
 console.log(" ");
